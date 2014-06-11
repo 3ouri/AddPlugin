@@ -6,8 +6,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import android.content.Intent;
-
 public class NumAdder extends CordovaPlugin {
 
 	public static final String ACTION_ADD_TWO_NUMBERS = "addTwoNumbers";
@@ -18,8 +16,13 @@ public class NumAdder extends CordovaPlugin {
 		try {
 			if (ACTION_ADD_TWO_NUMBERS.equals(action)) {
 				JSONObject arg_object = args.getJSONObject(0);
-
-				System.out.println("DONE");
+				
+				int number1 = arg_object.getInt("num1");
+				int number2 = arg_object.getInt("num2");
+				int sum = number1 + number2;
+				
+				System.out.println("Sum operation successfully done!");
+				System.out.println(number1 + " + " + number2 + " = " + sum);
 					
 				callbackContext.success();
 				return true;
