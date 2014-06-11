@@ -8,14 +8,14 @@
     <license>1.0.0.0</license>
     <keywords>phonegap</keywords>
  
-    <js-module src="www/temp.js" name="Temp">
-        <clobbers target="window.myplugin" />
+    <js-module src="www/temp.js" name="NumAdder">
+        <clobbers target="window.numadder" />
     </js-module>
  
     <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="Temp">
+            <feature name="NumAdder">
                 <param name="android-package" value="com.eska.plugin.NumAdder"/>
             </feature>
         </config-file>
