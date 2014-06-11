@@ -22,4 +22,4 @@
  
         <source-file src="src/android/NumAdder.java" target-dir="src/com/eska/plugin" />
      </platform>
-</plugin>
+</plugin> 
